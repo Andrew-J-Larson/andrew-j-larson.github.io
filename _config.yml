@@ -34,7 +34,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to a software development internships!<br><br>Right now, this website is very much a work in progress, so please standby over the next week while I get things up-to-date :)
+about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to software developer internships!<br><br>Right now, this website is very much a work in progress, so please standby over the next week while I get things up-to-date :)
 
 # SKILLS SECTION
 # show_skills_card:
