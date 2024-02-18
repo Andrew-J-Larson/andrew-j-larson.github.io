@@ -34,7 +34,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to software developer internships!<br><br>Right now, this website is very much a work in progress, so please standby over the next week while I get things up-to-date :)
+about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to software developer internships!<div class="text-center">If you'd like to help me out, you can support me by donating to any of the links below!</div><br><div class="space-center"><div><a href="https://ko-fi.com/E1E845O3L" target="_blank" rel="noreferrer"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi Button"></a></div><div><a href="https://www.patreon.com/bePatron?u=8414636" target="_blank" rel="noreferrer"><img src="https://github.com/Andrew-J-Larson/Andrew-J-Larson/raw/main/donate-buttons/www.patreon.com_dashboard_widgets.png" alt="Become a patreon Button"></a></div><div><a href="https://paypal.me/AndrewJ18Larson" target="_blank" rel="noreferrer"><img src="https://github.com/Andrew-J-Larson/Andrew-J-Larson/raw/main/donate-buttons/www.paypal.com_donate_button.png" alt="PayPal Donate Now Button"></a></div></div>
 
 # SKILLS SECTION
 # show_skills_card:
@@ -63,7 +63,7 @@ show_projects_card: true
 # show_projects:
 # > setting this to true, will display your listed projects in _data/projects.yml
 # > setting this to false, will omit your listed projects
-show_projects: false
+show_projects: true
 # projects_title: The will be displayed as the title of your projects
 projects_title: Projects
 # show_os_projects:
