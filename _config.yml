@@ -40,7 +40,7 @@ about_me_description: At the moment I've achieved Sophomore status in my B.S. in
 # show_skills_card:
 # > setting this to true, will display the Skills section
 # > setting this to false, will omit the Skills section
-show_skills_card: false
+show_skills_card: true
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: Skills
 
@@ -48,18 +48,18 @@ skills_title: Skills
 # show_timeline_card:
 # > setting this to true, will display the Timeline section
 # > setting this to false, will omit the Timeline section
-show_timeline_card: false
+show_timeline_card: true
 # timeline_title: The will be displayed as the title in the Timeline section
 timeline_title: Education & Experience
 # cv_download_link: The link where you host your cv.
 # > e.g. you share your cv on your dropbox, then add the dropbox link here
-cv_download_link: 
+cv_download_link: https://www.linkedin.com/in/andrew-j-larson/ # TODO - Once I have enough education/experience for a CV, I'll need to fix this + `.\_includes\section-timeline.html`
 
 # PROJECTS SECTION
 # show_projects_card:
 # > setting this to true, will display the Projects section
 # > setting this to false, will omit the Projects section
-show_projects_card: false
+show_projects_card: true
 # show_projects:
 # > setting this to true, will display your listed projects in _data/projects.yml
 # > setting this to false, will omit your listed projects
@@ -105,6 +105,7 @@ projects:
     projects:
     # - repo1-to-be-excluded
     # - repo2-to-be-excluded
+    - Andrew-J-Larson
 
 # GOOGLE-ANALYTICS
 # Set the id, if you want to track your website with Google Analytics
