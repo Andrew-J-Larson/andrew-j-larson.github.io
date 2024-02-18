@@ -15,6 +15,9 @@ username: Andrew Larson
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
 typing_text: Hobbyiest Programmer/Coder
+# profile_picture: This will be the picture shown with your name, size must be noted
+profile_picture: https://github.com/Andrew-J-Larson.png?size=192
+profile_picture_size: 192px
 # email: Your E-Mail address for the email button.
 email: Andrew.J.Larson18@gmail.com
 # For every social button you want to display, set your username or userid
