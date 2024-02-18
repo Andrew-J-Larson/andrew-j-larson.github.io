@@ -98,8 +98,9 @@ a {
   text-align: center;
 }
 
-.space-center {
+.space-wrap-center {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around; 
   align-items: center; 
 }
