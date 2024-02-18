@@ -14,15 +14,31 @@ $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
 $text-color: #fff !default;
-$bg-color: rgba(43, 45, 47, 1);
+$text-color-alt: #000 !default;
+$bg-color: #121212;
 $card-bg-color: linear-gradient(
   145deg,
-  rgba(115, 115, 115, 0.15) 15%,
-  rgba(43, 45, 47, 1) 80%
+  rgba(255, 255, 255, 0.10) 15%,
+  rgba(255, 255, 255, 0.05) 80%
 );
-$primary-color: #ff073a;
+$primary-color: #00ff80;
+$secondary-color: #0080ff;
+$text-selection-color: rgba(0, 255, 182, 0.2);
+$skill-language-color: #80ffbf;
+$skill-framework-color: #80ffff;
+$skill-tool-color: #80bfff;
+$social-email-color: #008040;
+$social-linkedin-color: #007bb6;
+$social-twitter-color: #1da1f2;
 
 /* General */
+
+::selection {
+  background: $text-selection-color; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $text-selection-color; /* Gecko Browsers */
+}
 
 html {
   background: $bg-color;
@@ -74,7 +90,7 @@ a {
 
   &:hover {
     box-shadow: inset 0 -2rem 0 0 $primary-color;
-    color: $text-color;
+    color: $text-color-alt;
   }
 }
 
@@ -171,7 +187,7 @@ a {
 
   .load :first-child {
     animation-delay: -1.5s;
-    background: $text-color;
+    background: $secondary-color;
   }
 
   .load :nth-child(2) {
@@ -181,7 +197,7 @@ a {
 
   .load :nth-child(3) {
     animation-delay: -0.5s;
-    background: $text-color;
+    background: $secondary-color;
   }
 
   .load :last-child {
@@ -221,7 +237,7 @@ a {
   &:hover,
   &:focus {
     background: $bg-color;
-    color: $text-color;
+    color: $text-color-alt;
   }
 }
 
@@ -309,7 +325,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: #d44638;
+      fill: $social-email-color;
     }
   }
 
@@ -319,7 +335,7 @@ a {
         colorLinkedin 1s linear forwards;
     }
     .social-svg {
-      fill: #007bb6;
+      fill: $social-linkedin-color;
     }
   }
 
@@ -329,7 +345,7 @@ a {
         colorTwitter 1s linear forwards;
     }
     .social-svg {
-      fill: #1da1f2;
+      fill: $social-twitter-color;
     }
   }
 
@@ -361,19 +377,19 @@ a {
 
   @keyframes colorEmail {
     to {
-      stroke: #b23121;
+      stroke: $social-email-color;
     }
   }
 
   @keyframes colorLinkedin {
     to {
-      stroke: #007bb6;
+      stroke: $social-linkedin-color;
     }
   }
 
   @keyframes colorTwitter {
     to {
-      stroke: #1da1f2;
+      stroke: $social-twitter-color;
     }
   }
 }
@@ -392,15 +408,15 @@ a {
   }
 
   div[skill-type="language"] {
-    color: #e84a5f;
+    color: $skill-language-color;
   }
 
   div[skill-type="framework"] {
-    color: #ff847c;
+    color: $skill-framework-color;
   }
 
   div[skill-type="tool"] {
-    color: #fecea8;
+    color: $skill-tool-color;
   }
 
   div[skill-weight="1"] {
@@ -628,6 +644,12 @@ a {
       }
     }
   }
+  
+  .email:hover {
+    .social-svg {
+      fill: $social-email-color;
+    }
+  }
 
   .black:hover {
     .social-svg {
@@ -637,13 +659,13 @@ a {
 
   .linkedin:hover {
     .social-svg {
-      fill: #007bb6;
+      fill: $social-linkedin-color;
     }
   }
 
   .twitter:hover {
     .social-svg {
-      fill: #1da1f2;
+      fill: $social-twitter-color;
     }
   }
 }

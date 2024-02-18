@@ -3,7 +3,7 @@
 
 <div class="contact-icons">
   {% if site.email != null %}
-  <a class="social-link" aria-label="My E-Mail" href="mailto:{{site.email}}">
+  <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.email}}">
     <div class="social">
       <svg class="social-svg" viewBox="0 0 48 48">
         <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/solid.svg#envelope" | prepend: site.baseurl }}"></use>
@@ -24,7 +24,7 @@
   {% endif %}
 
   {% if site.codepen_username != null %}
-  <a class="social-link black" aria-label="My Codepen" target="_blank" rel="noreferrer"
+  <a class="social-link" aria-label="My Codepen" target="_blank" rel="noreferrer"
     href="https://codepen.io/{{site.codepen_username}}">
     <div class="social">
       <svg class="social-svg" viewBox="0 0 48 48">
@@ -35,7 +35,7 @@
   {% endif %}
 
   {% if site.dev_username != null %}
-  <a class="social-link black" aria-label="My DEV" target="_blank" rel="noreferrer"
+  <a class="social-link" aria-label="My DEV" target="_blank" rel="noreferrer"
     href="https://dev.to/{{site.dev_username}}">
     <div class="social">
       <svg class="social-svg" viewBox="0 0 48 48">

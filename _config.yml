@@ -34,13 +34,13 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to a software development internships!
+about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to a software development internships!<br><br>Right now, this website is very much a work in progress, so please standby over the next week while I get things up-to-date :)
 
 # SKILLS SECTION
 # show_skills_card:
 # > setting this to true, will display the Skills section
 # > setting this to false, will omit the Skills section
-show_skills_card: true
+show_skills_card: false
 # about_me_title: The will be displayed as the title in the Skills section
 skills_title: Skills
 
@@ -48,7 +48,7 @@ skills_title: Skills
 # show_timeline_card:
 # > setting this to true, will display the Timeline section
 # > setting this to false, will omit the Timeline section
-show_timeline_card: true
+show_timeline_card: false
 # timeline_title: The will be displayed as the title in the Timeline section
 timeline_title: Education & Experience
 # cv_download_link: The link where you host your cv.
@@ -59,11 +59,11 @@ cv_download_link:
 # show_projects_card:
 # > setting this to true, will display the Projects section
 # > setting this to false, will omit the Projects section
-show_projects_card: true
+show_projects_card: false
 # show_projects:
 # > setting this to true, will display your listed projects in _data/projects.yml
 # > setting this to false, will omit your listed projects
-show_projects: true
+show_projects: false
 # projects_title: The will be displayed as the title of your projects
 projects_title: Projects
 # show_os_projects:
@@ -81,7 +81,7 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: If you'd like to get in touch with me, you can use my email at the top of this page, or reply to me on <a class="highlight-link" href="https://mstdn.social/?text=@Andrew_J_Larson@mstdn.social%20" target="_blank" rel="noreferrer"> Mastodon </a>.
+contact_description: If you'd like to get in touch with me, you can use any of the methods below, or reply to me on <a class="highlight-link" href="https://mstdn.social/?text=@Andrew_J_Larson@mstdn.social%20" target="_blank" rel="noreferrer"> Mastodon </a>.
 
 # GITHUB-METADATA
 # Set this to your forked repository

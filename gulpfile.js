@@ -6,7 +6,7 @@ var prefix = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
-var cp = require('child_process');
+var cp = require('cross-spawn');
 
 /**
  * Compile and minify sass
