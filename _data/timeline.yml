@@ -17,6 +17,16 @@
 #     - tag: Rails
 #   timeline-side: right
 
+- title: freeCodeCamp
+  title-url: https://www.freecodecamp.org/AndrewL18
+  date: Jul 2023 - Present
+  subtitle: Working on Responsive Web Design Certification
+  tags:
+    - tag: JavaScript
+    - tag: CSS3
+    - tag: HTML5
+  timeline-side: right
+
 - title: Northwest Pump
   title-url: https://www.nwpump.com/
   date: Apr 2021 - Present
