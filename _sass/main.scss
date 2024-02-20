@@ -33,6 +33,10 @@ $social-twitter-color: #1da1f2;
 
 /* General */
 
+:root {
+  color-scheme: dark;
+}
+
 ::selection {
   background: $text-selection-color; /* WebKit/Blink Browsers */
 }
