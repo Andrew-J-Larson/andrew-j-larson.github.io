@@ -19,6 +19,11 @@
 
   <script src="{{ "/assets/js/vendors.min.js" | prepend: site.baseurl }}?v={{ site.time | date: "%s" }}"></script>
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}?v={{ site.time | date: "%s" }}"></script>
+
+  {% if site.mastodon_userprofile_url != null %}
+    <!-- Mastodon Verification -->
+    <link rel="me" href="https://{{site.mastodon_userprofile_url}}">
+  {% endif %}
 </head>
 
 <body>
