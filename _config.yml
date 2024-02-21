@@ -119,7 +119,7 @@ projects:
   # sortby:
   # > set this to pushed, if you want to sort your github repositories by time.
   # > set this to stars, if you want to sort your github repositories by stars.
-  sort_by: pushed
+  sort_by: stars
   exclude:
     # archived:
     # > setting this to true, will exclude archived repositories
