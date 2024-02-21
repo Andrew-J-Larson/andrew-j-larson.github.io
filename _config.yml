@@ -20,14 +20,29 @@ profile_picture: https://github.com/Andrew-J-Larson.png?size=192
 profile_picture_size: 192px
 # email: Your E-Mail address for the email button.
 email: Andrew.J.Larson18@gmail.com
-# For every social button you want to display, set your username or userid
+# For every social button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
 github_username: Andrew-J-Larson
+gitlab_username: Andrew-J-Larson
+replit_handle: Andrew-J-Larson
 codepen_username: 
 dev_username: Andrew-J-Larson
+stackoverflow_userid: 7312536
 linkedin_username: Andrew-J-Larson
+reddit_username: 
 twitter_username: 
+bluesky_handle: # USERNAME.bsky.social
+mastodon_userprofile_url: mstdn.social/@Andrew_J_Larson # mastodon verification should work automatically
+threads_handle: 
+youtube_handle: Andrew-J-Larson
+# For every donate button you want to display, set your username, userid, etc.
+# If you do not use one of the following websites, then leave it empty
+# > kofi_username:
+kofi_username: Andrew_J_Larson
+patreon_username: Andrew_J_Larson
+paypal_username: AndrewJ18Larson
+# btc_wallet_address: ... TBD
 
 # ABOUT ME SECTION
 # show_aboutme_card:
@@ -37,7 +52,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to software developer internships!<div class="text-center">If you'd like to help me out, you can support me by donating to any of the links below!</div><br><div class="space-wrap-center"><div><a href="https://ko-fi.com/E1E845O3L" target="_blank" rel="noreferrer"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi Button"></a></div><div><a href="https://www.patreon.com/bePatron?u=8414636" target="_blank" rel="noreferrer"><img src="https://github.com/Andrew-J-Larson/Andrew-J-Larson/raw/main/donate-buttons/www.patreon.com_dashboard_widgets.png" alt="Become a patreon Button"></a></div><div><a href="https://paypal.me/AndrewJ18Larson" target="_blank" rel="noreferrer"><img src="https://github.com/Andrew-J-Larson/Andrew-J-Larson/raw/main/donate-buttons/www.paypal.com_donate_button.png" alt="PayPal Donate Now Button"></a></div></div>
+about_me_description: At the moment I've achieved Sophomore status in my B.S. in Computer Science at Portland State University (up to course CS 163), but I've been taking a break (since early 2021) mainly due to financial stressors and other personal goals. I have a strong interest in software development/programming, and I am eager to learn and grow in this field. Please reach out to me with any job opportunities related to software developer internships!
 
 # SKILLS SECTION
 # show_skills_card:
@@ -84,7 +99,17 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: If you'd like to get in touch with me, you can use any of the methods below, or reply to me on <a class="highlight-link" href="https://mstdn.social/?text=@Andrew_J_Larson@mstdn.social%20" target="_blank" rel="noreferrer"> Mastodon </a>.
+contact_description: If you'd like to get in touch with me, you can use any of the buttons below!
+
+# DONATE SECTION
+# show_donate_card:
+# > setting this to true, will display the Donate section
+# > setting this to false, will omit the Donate section
+show_donate_card: true
+# donate_title: The will be displayed as the title in the Donate section
+donate_title: Donate
+# donate_description: This will be displayed under the title.
+donate_description: If you'd like to support me, you can donate with any of the button below!
 
 # GITHUB-METADATA
 # Set this to your forked repository
@@ -108,7 +133,6 @@ projects:
     projects:
     # - repo1-to-be-excluded
     # - repo2-to-be-excluded
-    - Andrew-J-Larson
 
 # GOOGLE-ANALYTICS
 # Set the id, if you want to track your website with Google Analytics

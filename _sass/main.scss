@@ -28,8 +28,17 @@ $skill-language-color: #80ffbf;
 $skill-framework-color: #80ffff;
 $skill-tool-color: #80bfff;
 $social-email-color: #008040;
-$social-linkedin-color: #007bb6;
+$social-gitlab-color: #fc6d26;
+$social-replit-color: #f26207;
+$social-stackoverflow-color: #f58025;
+$social-linkedin-color: #0a66c2;
+$social-reddit-color: #ff4500;
 $social-twitter-color: #1da1f2;
+$social-bluesky-color: #0285ff;
+$social-mastodon-color: #6364ff;
+$social-youtube-color: #ff0000;
+$donate-kofi-color: #ff5E5b;
+$donate-paypal-color: #009cde;
 
 /* General */
 
@@ -98,6 +107,19 @@ a {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+.space-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+/* Layout */
+
 .profile-picture {
   position: relative;
   margin: 0 auto;
@@ -120,19 +142,6 @@ a {
   
   box-shadow: 0.25rem 0.25rem 0.5rem $primary-color;
 }
-
-.text-center {
-  text-align: center;
-}
-
-.space-wrap-center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; 
-  align-items: center; 
-}
-
-/* Layout */
 
 .layout {
   margin: 0.5rem;
@@ -333,6 +342,8 @@ a {
 
     .label {
       display: none;
+      white-space: nowrap;
+      position: absolute;
     }
 
     &:hover {
@@ -351,8 +362,9 @@ a {
 
       .label {
         display: unset !important;
-        position: relative;
-        top: -2rem;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translate(-50%);
       }
     }
   }
@@ -367,6 +379,36 @@ a {
     }
   }
 
+  .gitlab:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorGitLab 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-gitlab-color;
+    }
+  }
+
+  .replit:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorReplit 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-replit-color;
+    }
+  }
+
+  .stackoverflow:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorStackOverflow 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-stackoverflow-color;
+    }
+  }
+
   .linkedin:hover {
     .circle {
       animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
@@ -377,6 +419,16 @@ a {
     }
   }
 
+  .reddit:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorReddit 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-reddit-color;
+    }
+  }
+
   .twitter:hover {
     .circle {
       animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
@@ -384,6 +436,36 @@ a {
     }
     .social-svg {
       fill: $social-twitter-color;
+    }
+  }
+
+  .bluesky:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorBluesky 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-bluesky-color;
+    }
+  }
+
+  .mastodon:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorMastodon 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-mastodon-color;
+    }
+  }
+
+  .youtube:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorYouTube 1s linear forwards;
+    }
+    .social-svg {
+      fill: $social-youtube-color;
     }
   }
 
@@ -419,15 +501,57 @@ a {
     }
   }
 
+  @keyframes colorGitLab {
+    to {
+      stroke: $social-gitlab-color;
+    }
+  }
+
+  @keyframes colorReplit {
+    to {
+      stroke: $social-replit-color;
+    }
+  }
+
+  @keyframes colorStackOverflow {
+    to {
+      stroke: $social-stackoverflow-color;
+    }
+  }
+
   @keyframes colorLinkedin {
     to {
       stroke: $social-linkedin-color;
     }
   }
 
+  @keyframes colorReddit {
+    to {
+      stroke: $social-reddit-color;
+    }
+  }
+
   @keyframes colorTwitter {
     to {
       stroke: $social-twitter-color;
+    }
+  }
+
+  @keyframes colorBluesky {
+    to {
+      stroke: $social-bluesky-color;
+    }
+  }
+
+  @keyframes colorMastodon {
+    to {
+      stroke: $social-mastodon-color;
+    }
+  }
+
+  @keyframes colorYouTube {
+    to {
+      stroke: $social-youtube-color;
     }
   }
 }
@@ -695,15 +819,108 @@ a {
     }
   }
 
+  .gitlab:hover {
+    .social-svg {
+      fill: $social-gitlab-color;
+    }
+  }
+
+  .replit:hover {
+    .social-svg {
+      fill: $social-replit-color;
+    }
+  }
+
+  .stackoverflow:hover {
+    .social-svg {
+      fill: $social-stackoverflow-color;
+    }
+  }
+
   .linkedin:hover {
     .social-svg {
       fill: $social-linkedin-color;
     }
   }
 
+  .reddit:hover {
+    .social-svg {
+      fill: $social-reddit-color;
+    }
+  }
+
   .twitter:hover {
     .social-svg {
       fill: $social-twitter-color;
+    }
+  }
+
+  .bluesky:hover {
+    .social-svg {
+      fill: $social-bluesky-color;
+    }
+  }
+
+  .mastodon:hover {
+    .social-svg {
+      fill: $social-mastodon-color;
+    }
+  }
+
+  .youtube:hover {
+    .social-svg {
+      fill: $social-youtube-color;
+    }
+  }
+}
+
+/* Donate Card */
+
+.donate-icons {
+  display: flex;
+  justify-content: center;
+
+  .donate-link {
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.25rem;
+    text-align: center;
+    width: 3rem;
+
+    .donate {
+      font-size: 1.5rem;
+    }
+
+    .donate-svg {
+      fill: $primary-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: jump 1s infinite alternate;
+
+      .donate-svg {
+        fill: $text-color;
+      }
+    }
+  }
+
+  .black:hover {
+    .donate-svg {
+      fill: #000;
+    }
+  }
+
+  .kofi:hover {
+    .donate-svg {
+      fill: $donate-kofi-color;
+    }
+  }
+
+  .paypal:hover {
+    .donate-svg {
+      fill: $donate-paypal-color;
     }
   }
 }
@@ -888,6 +1105,16 @@ a {
     line-height: 4rem;
 
     .social {
+      font-size: 2rem;
+    }
+  }
+
+  .donate-icons .donate-link {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+
+    .donate {
       font-size: 2rem;
     }
   }

@@ -75,6 +75,14 @@
 * `contact_title`: The will be displayed as the title in the Contact section
 * `contact_description`: This will be displayed under the title.
 
+## Donate Section
+
+* `show_donate_card`:
+  * setting this to **true**, will display the Donate section
+  * setting this to **false**, will omit the Donate section
+* `donate_title`: The will be displayed as the title in the Donate section
+* `donate_description`: This will be displayed under the title.
+
 ## Github Metadata
 
 * `repository`:
