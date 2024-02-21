@@ -39,6 +39,7 @@ $social-mastodon-color: #6364ff;
 $social-youtube-color: #ff0000;
 $donate-kofi-color: #ff5E5b;
 $donate-paypal-color: #009cde;
+$donate-bitcoin-color: #f7931a;
 
 /* General */
 
@@ -119,6 +120,41 @@ a {
 }
 
 /* Layout */
+
+#bitcoin-snackbar {
+  visibility: hidden;
+  color: $text-color;
+  background: $card-bg-color;
+  border: 1px solid white;
+  min-width: 250px;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  margin-top: 4em;
+  z-index: 1;
+  position: absolute;
+}
+#bitcoin-snackbar.show {
+  visibility: visible;
+  -webkit-animation: snackbar-fadein 0.5s, snackbar-fadeout 0.5s 2.5s;
+  animation: snackbar-fadein 0.5s, snackbar-fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes snackbar-fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@keyframes snackbar-fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+@-webkit-keyframes snackbar-fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes snackbar-fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
 
 .profile-picture {
   position: relative;
@@ -921,6 +957,12 @@ a {
   .paypal:hover {
     .donate-svg {
       fill: $donate-paypal-color;
+    }
+  }
+
+  .bitcoin:hover {
+    .donate-svg {
+      fill: $donate-bitcoin-color;
     }
   }
 }

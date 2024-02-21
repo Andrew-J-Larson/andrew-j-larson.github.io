@@ -42,7 +42,7 @@ youtube_handle: Andrew-J-Larson
 kofi_username: Andrew_J_Larson
 patreon_username: Andrew_J_Larson
 paypal_username: AndrewJ18Larson
-# btc_wallet_address: ... TBD
+bitcoin_wallet_address: bc1qzmauw4pneakmwjh7yracfrlqqp4n24grgjqs7p
 
 # ABOUT ME SECTION
 # show_aboutme_card:
@@ -99,7 +99,7 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: If you'd like to get in touch with me, you can use any of the buttons below!
+contact_description: Get in touch with me directly or reply to something on one of my socials!
 
 # DONATE SECTION
 # show_donate_card:
@@ -109,7 +109,7 @@ show_donate_card: true
 # donate_title: The will be displayed as the title in the Donate section
 donate_title: Donate
 # donate_description: This will be displayed under the title.
-donate_description: If you'd like to support me, you can donate with any of the buttons below!
+donate_description: If you'd like to support me, I accept payments from the following services!
 
 # GITHUB-METADATA
 # Set this to your forked repository
