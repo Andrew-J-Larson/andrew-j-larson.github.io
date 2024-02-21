@@ -109,7 +109,7 @@ show_donate_card: true
 # donate_title: The will be displayed as the title in the Donate section
 donate_title: Donate
 # donate_description: This will be displayed under the title.
-donate_description: If you'd like to support me, you can donate with any of the button below!
+donate_description: If you'd like to support me, you can donate with any of the buttons below!
 
 # GITHUB-METADATA
 # Set this to your forked repository
