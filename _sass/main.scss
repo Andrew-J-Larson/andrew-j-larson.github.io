@@ -5,6 +5,8 @@
 
 /* Variables */
 
+$website-min-width: 267px;
+$tiny-screen: 20em !default;
 $small-screen: 48em !default;
 $medium-screen: 62em !default;
 $large-screen: 75em !default;
@@ -66,6 +68,7 @@ html {
 
 body {
   height: 100%;
+  min-width: $website-min-width;
 }
 
 /* Typography */
@@ -342,11 +345,12 @@ a {
   padding: 0.5rem;
   position: absolute;
   right: 0;
-  top: 30%;
+  top: 20%;
 }
 
 .landing-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   .social-link {
@@ -815,6 +819,7 @@ a {
 
 .contact-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   .social-link {
@@ -914,6 +919,7 @@ a {
 
 .donate-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   .donate-link {
@@ -969,7 +975,26 @@ a {
 
 /* Media Queries */
 
+@media only screen and (max-width: $tiny-screen) {
+
+  #bitcoin-snackbar {
+    padding: 8px;
+    margin-top: 8em;
+  }
+
+}
+
+@media only screen and (min-width: $tiny-screen) and (max-width: $small-screen) {
+
+  #bitcoin-snackbar {
+    padding: 12px;
+    margin-top: 3.25em;
+  }
+
+}
+
 @media only screen and (min-width: $small-screen) {
+
   .layout {
     margin: 0.5rem auto;
     padding: 2rem 2rem;

@@ -14,12 +14,12 @@ baseurl: ""
 username: Andrew Larson
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Hobbyiest Programmer/Coder
+typing_text: Hobbyiest Software Dev
 # profile_picture: This will be the picture shown with your name, size must be noted
 profile_picture: https://github.com/Andrew-J-Larson.png?size=192
 profile_picture_size: 192px
 # email: Your E-Mail address for the email button.
-email: Andrew.J.Larson18@gmail.com
+email: contact@Andrew-Larson.dev
 # For every social button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
@@ -71,7 +71,7 @@ show_timeline_card: true
 timeline_title: Education & Experience
 # cv_download_link: The link where you host your cv.
 # > e.g. you share your cv on your dropbox, then add the dropbox link here
-cv_download_link: https://www.linkedin.com/in/andrew-j-larson/ # TODO - Once I have enough education/experience for a CV, I'll need to fix this + `.\_includes\section-timeline.html`
+cv_download_link: https://www.linkedin.com/in/Andrew-J-Larson/ # TODO - Once I have enough education/experience for a CV, I'll need to fix this + `.\_includes\section-timeline.html`
 
 # PROJECTS SECTION
 # show_projects_card:
