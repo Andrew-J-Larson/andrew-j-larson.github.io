@@ -160,19 +160,19 @@
         </a>
       {% endif %}
 
-      {% if site.twitter_username != null %}
-        <a class="social-link twitter" aria-label="My Twitter" target="_blank"
-          rel="noreferrer" href="https://twitter.com/{{site.twitter_username}}"
+      {% if site.x_twitter_username != null %}
+        <a class="social-link" aria-label="My X (Twitter)" target="_blank"
+          rel="noreferrer" href="https://x.com/{{site.x_twitter_username}}"
         >
           <svg viewBox="0 0 200 200" class="circle">
             <circle cx="100" cy="100" r="80" />
           </svg>
           <div class="social">
             <svg class="social-svg" viewBox="0 0 48 48">
-              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
+              <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#x-twitter" | prepend: site.baseurl }}"></use>
             </svg>
           </div>
-          <span class="label">Twitter</span>
+          <span class="label">X (Twitter)</span>
         </a>
       {% endif %}
 

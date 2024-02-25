@@ -35,7 +35,6 @@ $social-replit-color: #f26207;
 $social-stackoverflow-color: #f58025;
 $social-linkedin-color: #0a66c2;
 $social-reddit-color: #ff4500;
-$social-twitter-color: #1da1f2;
 $social-bluesky-color: #0285ff;
 $social-mastodon-color: #6364ff;
 $social-youtube-color: #ff0000;
@@ -469,16 +468,6 @@ a {
     }
   }
 
-  .twitter:hover {
-    .circle {
-      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
-        colorTwitter 1s linear forwards;
-    }
-    .social-svg {
-      fill: $social-twitter-color;
-    }
-  }
-
   .bluesky:hover {
     .circle {
       animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
@@ -568,12 +557,6 @@ a {
   @keyframes colorReddit {
     to {
       stroke: $social-reddit-color;
-    }
-  }
-
-  @keyframes colorTwitter {
-    to {
-      stroke: $social-twitter-color;
     }
   }
 
@@ -887,12 +870,6 @@ a {
   .reddit:hover {
     .social-svg {
       fill: $social-reddit-color;
-    }
-  }
-
-  .twitter:hover {
-    .social-svg {
-      fill: $social-twitter-color;
     }
   }
 
