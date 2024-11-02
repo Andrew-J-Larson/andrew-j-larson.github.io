@@ -38,9 +38,10 @@ threads_handle:
 youtube_handle: Andrew-J-Larson
 # For every donate button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
-# > kofi_username:
-kofi_username: Andrew_J_Larson
-patreon_username: Andrew_J_Larson
+# > buymeacoffee_username:
+buymeacoffee_username: Andrew.J.Larson
+kofi_username: 
+patreon_username: 
 paypal_username: AndrewJ18Larson
 bitcoin_wallet_address: bc1qzmauw4pneakmwjh7yracfrlqqp4n24grgjqs7p
 

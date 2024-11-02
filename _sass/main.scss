@@ -38,6 +38,7 @@ $social-reddit-color: #ff4500;
 $social-bluesky-color: #0285ff;
 $social-mastodon-color: #6364ff;
 $social-youtube-color: #ff0000;
+$donate-buymeacoffee-color: #FFDD00;
 $donate-kofi-color: #ff5E5b;
 $donate-paypal-color: #009cde;
 $donate-bitcoin-color: #f7931a;
@@ -928,6 +929,12 @@ a {
   .black:hover {
     .donate-svg {
       fill: #000;
+    }
+  }
+
+  .buymeacoffee:hover {
+    .donate-svg {
+      fill: $donate-buymeacoffee-color;
     }
   }
 
