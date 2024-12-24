@@ -25,10 +25,11 @@
 <!-- Decodes email if needed-->
 {% if site.email_encoded != null %}
 <script type="text/javascript">
-  let decoded = atob("{{site.email_encoded}}");
-  let decodeElements = document.body.querySelectorAll('.email');
-  decodeElements.forEach((decodeElement) => {
-    decodeElement.href = (decodeElement.href).replace('encoded', decoded);
+  let encoded = "{{site.email_encoded}}";
+  let decoded = atob(encoded);
+  let replaceElements = document.body.querySelectorAll('.email');
+  replaceElements.forEach((replaceMe) => {
+    replaceMe.href = (replaceMe.href).replace('encoded', decoded);
   });
 </script>
 {% endif %}
