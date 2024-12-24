@@ -19,7 +19,8 @@ typing_text: Hobbyiest Software Dev
 profile_picture: https://github.com/Andrew-J-Larson.png?size=192
 profile_picture_size: 192px
 # email: Your E-Mail address for the email button.
-email: contact@Andrew-Larson.dev
+email: encoded # for avoiding webscrapers, leave this value as "encoded" (without quotes)
+email_encoded: Y29udGFjdEBBbmRyZXctTGFyc29uLmRldg== # for avoiding webscrapers, encode email to base64, and put here
 # For every social button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:

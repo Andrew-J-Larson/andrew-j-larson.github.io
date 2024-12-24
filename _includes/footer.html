@@ -22,6 +22,17 @@
   </p>
 </footer>
 
+<!-- Decodes email if needed-->
+{% if site.email_encoded != null %}
+<script type="text/javascript">
+  let decoded = atob("{{site.email_encoded}}");
+  let decodeElements = document.body.querySelectorAll('.email');
+  decodeElements.forEach((decodeElement) => {
+    decodeElement.href = (decodeElement.href).replace('encoded', decoded);
+  });
+</script>
+{% endif %}
+
 <!-- Google Analytics -->
 {% if site.google-analytics %}
 <script>
