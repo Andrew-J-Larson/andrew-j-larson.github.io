@@ -19,8 +19,13 @@ typing_text: Hobbyiest Software Dev
 profile_picture: https://github.com/Andrew-J-Larson.png?size=192
 profile_picture_size: 192px
 # email: Your E-Mail address for the email button.
-email: encoded # for avoiding webscrapers, leave this value as "encoded" (without quotes)
-email_encoded: Y29udGFjdEBBbmRyZXctTGFyc29uLmRldg== # for avoiding webscrapers, encode email to base64, and put here
+# > to avoid webscrapers, leave the this field set to the default email addres (reportphishing@apwg.org)
+#   so that webscrapers automatically send their phishing mail to the right place, then encode your
+#   email to base64, and put that in the `email_encoded` field
+# email_encoded: Your base64 encoded E-Mail address for the email button.
+# > (only required if avoid step was taken)
+email: reportphishing@apwg.org # reportphishing@apwg.org
+email_encoded: Y29udGFjdEBBbmRyZXctTGFyc29uLmRldg==
 # For every social button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:

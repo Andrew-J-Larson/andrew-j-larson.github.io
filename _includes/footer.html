@@ -29,7 +29,7 @@
   let decoded = atob(encoded);
   let replaceElements = document.body.querySelectorAll('.email');
   replaceElements.forEach((replaceMe) => {
-    replaceMe.href = (replaceMe.href).replace('encoded', decoded);
+    replaceMe.href = (replaceMe.href).replace("{{site.email}}", decoded);
   });
 </script>
 {% endif %}
