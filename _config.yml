@@ -25,7 +25,7 @@ profile_picture_size: 192px
 # email_encoded: Your base64 encoded E-Mail address for the email button.
 # > (only required if avoid step was taken)
 email: reportphishing@apwg.org # reportphishing@apwg.org
-email_encoded: Y29udGFjdEBBbmRyZXctTGFyc29uLmRldg==
+email_encoded: Y29udGFjdEBkcmV3ai5sYQ==
 # For every social button you want to display, set your username, userid, etc.
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
