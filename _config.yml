@@ -4,7 +4,7 @@
 # title: This will be displayed as the website's name in your browser tab.
 title: Andrew Larson
 # description: This will be meta HTML tag content. This can be ignored.
-description: Personal website powered by Jekyll
+description: Oh, hey look! A website with my name on it. :P
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
 baseurl: ""
@@ -14,7 +14,7 @@ baseurl: ""
 username: Andrew Larson
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Hobbyiest Software Dev
+typing_text: Hobbyist Software Dev
 # profile_picture: This will be the picture shown with your name, size must be noted
 profile_picture: https://github.com/Andrew-J-Larson.png?size=192
 profile_picture_size: 192px
@@ -38,7 +38,7 @@ stackoverflow_userid: 7312536
 linkedin_username: Andrew-J-Larson
 reddit_username: 
 x_twitter_username: 
-bluesky_handle: # USERNAME.bsky.social
+bluesky_userprofile_url: # https://bsky.app/profile/USERNAME.bsky.social ... OR ... https://bsky.app/profile/YOURDOMAIN.TLD
 mastodon_userprofile_url: mastodon.social/@Andrew_J_Larson # mastodon verification should work automatically
 threads_handle: 
 youtube_handle: Andrew-J-Larson
@@ -49,7 +49,12 @@ buymeacoffee_username: Andrew.J.Larson
 kofi_username: 
 patreon_username: 
 paypal_username: AndrewJ18Larson
-bitcoin_wallet_address: bc1qzmauw4pneakmwjh7yracfrlqqp4n24grgjqs7p
+coinbase_commerce_url: https://commerce.coinbase.com/checkout/acbae935-8b85-4070-959d-bbc7c8878eca
+bitcoin_wallet_address: PLACEHOLDER
+ethereum_wallet_address: PLACEHOLDER
+solana_wallet_address: 
+dogecoin_wallet_address: 
+litecoin_wallet_address: 
 
 # ABOUT ME SECTION
 # show_aboutme_card:

@@ -41,7 +41,13 @@ $social-youtube-color: #ff0000;
 $donate-buymeacoffee-color: #FFDD00;
 $donate-kofi-color: #ff5E5b;
 $donate-paypal-color: #009cde;
+$donate-coinbase-color: #0052FF;
 $donate-bitcoin-color: #f7931a;
+$donate-solana-color: #9945FF;
+$donate-dogecoin-color: #C2A633;
+$donate-litecoin-color: #A6A9AA;
+$snackbar-fade-duration: 0.5s; /* used for fadein and fadeout */
+$snackbar-fade-delay: 2.5s; /* only used for fadeout */
 
 /* General */
 
@@ -124,7 +130,7 @@ a {
 
 /* Layout */
 
-#bitcoin-snackbar {
+.crypto-wallet-snackbar {
   visibility: hidden;
   color: $text-color;
   background: $card-bg-color;
@@ -136,11 +142,38 @@ a {
   margin-top: 4em;
   z-index: 1;
   position: absolute;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &.landing.show {
+    visibility: visible;
+    -webkit-animation: landing-snackbar-fadein $snackbar-fade-duration, landing-snackbar-fadeout $snackbar-fade-duration $snackbar-fade-delay;
+    animation: landing-snackbar-fadein $snackbar-fade-duration, landing-snackbar-fadeout $snackbar-fade-duration $snackbar-fade-delay;
+  }
+
+  &:not(.landing).show {
+    visibility: visible;
+    -webkit-animation: snackbar-fadein $snackbar-fade-duration, snackbar-fadeout $snackbar-fade-duration $snackbar-fade-delay;
+    animation: snackbar-fadein $snackbar-fade-duration, snackbar-fadeout $snackbar-fade-duration $snackbar-fade-delay;
+  }
 }
-#bitcoin-snackbar.show {
-  visibility: visible;
-  -webkit-animation: snackbar-fadein 0.5s, snackbar-fadeout 0.5s 2.5s;
-  animation: snackbar-fadein 0.5s, snackbar-fadeout 0.5s 2.5s;
+@-webkit-keyframes landing-snackbar-fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: -2.25rem; opacity: 1;}
+}
+@keyframes landing-snackbar-fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: -2.25rem; opacity: 1;}
+}
+@-webkit-keyframes landing-snackbar-fadeout {
+  from {bottom: -2.25rem; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+@keyframes landing-snackbar-fadeout {
+  from {bottom: -2.25rem; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
 @-webkit-keyframes snackbar-fadein {
   from {bottom: 0; opacity: 0;}
@@ -348,12 +381,16 @@ a {
   top: 20%;
 }
 
+.landing-icons:nth-last-of-type(1) {
+  margin-top: 0.5rem;
+}
+
 .landing-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  .social-link {
+  .social-link, .donate-link {
     color: $text-color;
     position: relative;
     height: 3rem;
@@ -368,7 +405,7 @@ a {
       transition: all 0.2s ease-in-out;
     }
 
-    .social {
+    .social, .donate {
       font-size: 1.5rem;
       position: absolute;
       top: 0px;
@@ -376,7 +413,7 @@ a {
       width: 100%;
     }
 
-    .social-svg {
+    .social-svg, .donate-svg {
       fill: white;
     }
 
@@ -396,7 +433,7 @@ a {
         fill-opacity: 1;
       }
 
-      .social-svg {
+      .social-svg, .donate-svg {
         fill: #000;
       }
 
@@ -408,6 +445,8 @@ a {
       }
     }
   }
+
+  /* Social Landing section */
 
   .email:hover {
     .circle {
@@ -499,6 +538,88 @@ a {
     }
   }
 
+  /* Donate Landing section */
+
+  .buymeacoffee:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorBuymeacoffee 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-buymeacoffee-color;
+    }
+  }
+
+  .kofi:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorKofi 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-kofi-color;
+    }
+  }
+
+  .paypal:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorPaypal 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-paypal-color;
+    }
+  }
+
+  .coinbase:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorCoinbase 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-coinbase-color;
+    }
+  }
+
+  .bitcoin:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorBitcoin 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-bitcoin-color;
+    }
+  }
+
+  .solana:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorSolana 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-solana-color;
+    }
+  }
+
+  .dogecoin:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorDogecoin 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-dogecoin-color;
+    }
+  }
+
+  .litecoin:hover {
+    .circle {
+      animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+        colorLitecoin 1s linear forwards;
+    }
+    .donate-svg {
+      fill: $donate-litecoin-color;
+    }
+  }
+
   @keyframes outWaveIn {
     to {
       stroke-dasharray: 510;
@@ -524,6 +645,8 @@ a {
       stroke: #000;
     }
   }
+
+  /* Social Landing section */
 
   @keyframes colorEmail {
     to {
@@ -576,6 +699,56 @@ a {
   @keyframes colorYouTube {
     to {
       stroke: $social-youtube-color;
+    }
+  }
+
+  /* Donate Landing section */
+
+  @keyframes colorBuymeacoffee {
+    to {
+      stroke: $donate-buymeacoffee-color;
+    }
+  }
+
+  @keyframes colorKofi {
+    to {
+      stroke: $donate-kofi-color;
+    }
+  }
+
+  @keyframes colorPaypal {
+    to {
+      stroke: $donate-paypal-color;
+    }
+  }
+
+  @keyframes colorCoinbase {
+    to {
+      stroke: $donate-coinbase-color;
+    }
+  }
+
+  @keyframes colorBitcoin {
+    to {
+      stroke: $donate-bitcoin-color;
+    }
+  }
+
+  @keyframes colorSolana {
+    to {
+      stroke: $donate-solana-color;
+    }
+  }
+
+  @keyframes colorDogecoin {
+    to {
+      stroke: $donate-dogecoin-color;
+    }
+  }
+
+  @keyframes colorLitecoin {
+    to {
+      stroke: $donate-litecoin-color;
     }
   }
 }
@@ -799,14 +972,14 @@ a {
   padding: 0.5rem;
 }
 
-/* Contact Card */
+/* Contact & Donate Cards */
 
-.contact-icons {
+.contact-icons, .donate-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  .social-link {
+  .social-link, .donate-link {
     position: relative;
     height: 3rem;
     line-height: 3rem;
@@ -814,11 +987,11 @@ a {
     text-align: center;
     width: 3rem;
 
-    .social {
+    .social, .donate {
       font-size: 1.5rem;
     }
 
-    .social-svg {
+    .social-svg, .donate-svg {
       fill: $primary-color;
     }
 
@@ -826,21 +999,23 @@ a {
       cursor: pointer;
       animation: jump 1s infinite alternate;
 
-      .social-svg {
+      .social-svg, .donate-svg {
         fill: $text-color;
       }
     }
   }
-  
-  .email:hover {
-    .social-svg {
-      fill: $social-email-color;
+
+  .black:hover {
+    .social-svg, .donate-svg {
+      fill: #000;
     }
   }
 
-  .black:hover {
+  /* Contact Cards section */
+
+  .email:hover {
     .social-svg {
-      fill: #000;
+      fill: $social-email-color;
     }
   }
 
@@ -891,46 +1066,8 @@ a {
       fill: $social-youtube-color;
     }
   }
-}
 
-/* Donate Card */
-
-.donate-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  .donate-link {
-    position: relative;
-    height: 3rem;
-    line-height: 3rem;
-    margin: 0.25rem;
-    text-align: center;
-    width: 3rem;
-
-    .donate {
-      font-size: 1.5rem;
-    }
-
-    .donate-svg {
-      fill: $primary-color;
-    }
-
-    &:hover {
-      cursor: pointer;
-      animation: jump 1s infinite alternate;
-
-      .donate-svg {
-        fill: $text-color;
-      }
-    }
-  }
-
-  .black:hover {
-    .donate-svg {
-      fill: #000;
-    }
-  }
+  /* Donate Cards section */
 
   .buymeacoffee:hover {
     .donate-svg {
@@ -950,9 +1087,33 @@ a {
     }
   }
 
+  .coinbase:hover {
+    .donate-svg {
+      fill: $donate-coinbase-color;
+    }
+  }
+
   .bitcoin:hover {
     .donate-svg {
       fill: $donate-bitcoin-color;
+    }
+  }
+
+  .solana:hover {
+    .donate-svg {
+      fill: $donate-solana-color;
+    }
+  }
+
+  .dogecoin:hover {
+    .donate-svg {
+      fill: $donate-dogecoin-color;
+    }
+  }
+
+  .litecoin:hover {
+    .donate-svg {
+      fill: $donate-litecoin-color;
     }
   }
 }
@@ -961,7 +1122,7 @@ a {
 
 @media only screen and (max-width: $tiny-screen) {
 
-  #bitcoin-snackbar {
+  .crypto-wallet-snackbar {
     padding: 8px;
     margin-top: 8em;
   }
@@ -970,7 +1131,7 @@ a {
 
 @media only screen and (min-width: $tiny-screen) and (max-width: $small-screen) {
 
-  #bitcoin-snackbar {
+  .crypto-wallet-snackbar {
     padding: 12px;
     margin-top: 3.25em;
   }
@@ -996,12 +1157,12 @@ a {
     font-size: 3rem;
   }
 
-  .landing-icons .social-link {
+  .landing-icons .social-link, .landing-icons .donate-link {
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
 
-    .social {
+    .social, .donate {
       font-size: 2rem;
     }
   }
@@ -1150,22 +1311,12 @@ a {
     }
   }
 
-  .contact-icons .social-link {
+  .contact-icons .social-link, .donate-icons .donate-link {
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
 
-    .social {
-      font-size: 2rem;
-    }
-  }
-
-  .donate-icons .donate-link {
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
-
-    .donate {
+    .social, .donate {
       font-size: 2rem;
     }
   }

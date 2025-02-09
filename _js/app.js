@@ -122,7 +122,7 @@ function randomizeOrder() {
   parent.appendChild(frag);
 }
 
-/* For Loading Bitcoin Wallet Addresses */
+/* For Loading Crypto Wallet Addresses */
 
 var previousHref = null;
 document.addEventListener('click', e => {
@@ -130,12 +130,12 @@ document.addEventListener('click', e => {
   if (origin) previousHref = origin.href;
 });
 // code modified from https://stackoverflow.com/a/71608716/7312536
-function showBitcoinSnackBar() {
-  var sb = document.getElementById("bitcoin-snackbar");
+function showCryptoWalletSnackBar(anchorID) {
+  var sb = document.getElementById(`${anchorID}-snackbar`);
 
-  sb.className = "show";
+  sb.classList.add('show');
 
-  setTimeout(()=>{ sb.className = sb.className.replace("show", ""); }, 3000);
+  setTimeout(()=>{ sb.classList.remove('show'); }, 3000);
 }
 // code modified from https://gist.github.com/diachedelic/0d60233dab3dcae3215da8a4dfdcd434
 function DeepLinker(options) {
@@ -201,38 +201,40 @@ function DeepLinker(options) {
 
   // expose public API
   this.destroy = bindEvents.bind(null, 'remove');
-  this.openURL = function(url) {
+  this.openURL = function(url, anchorID, fixScroll) {
     // it can take a while for the dialog to appear
     var dialogTimeout = 500;
 
-    setTimeout(function() {
+    setTimeout(function(timeoutURL, timeoutAnchorID, timeoutFixScroll) {
       if (hasFocus && options.onIgnored) {
-        options.onIgnored();
+        options.onIgnored(timeoutURL, timeoutAnchorID, timeoutFixScroll);
       }
-    }, dialogTimeout);
+    }, dialogTimeout, url, anchorID, fixScroll);
 
     window.location = url;
   };
 }
-var bitcoinWalletAddress = null;
 var linker = new DeepLinker({
-  onIgnored: function() {
-    // if bitcoin address, and no bitcoin scheme handler, then instead copy to clipboard and notify user
-    if (bitcoinWalletAddress && previousHref && previousHref.startsWith('javascript:bitcoin')) {
-      navigator.clipboard.writeText(bitcoinWalletAddress).then(function() {
+  onIgnored: function(url, anchorID, fixScroll) {
+    var cryptoWalletArray = url.split(':');
+    var cryptoWalletAddress = (cryptoWalletArray && (cryptoWalletArray.length == 2)) ? url.split(':')[1] : null;
+    // if crypto wallet address, and no cryptocurrency scheme handler, then instead copy to clipboard and notify user
+    if (cryptoWalletAddress && previousHref && previousHref.startsWith(`javascript:cryptoWallet('${url}','${anchorID}',${fixScroll})`)) {
+      navigator.clipboard.writeText(cryptoWalletAddress).then(function() {
         /* clipboard successfully set */
-        showBitcoinSnackBar();
+        showCryptoWalletSnackBar(anchorID);
       }, function() {
         /* clipboard write failed */
       });
     }
   }
 });
-function bitcoin(btc) {
-    bitcoinWalletAddress = btc;
-    linker.openURL('bitcoin:' + btc);
-    // fix the auto scroll to the top when bitcoin scheme doesn't have handler
-    window.location.replace('#bitcoin');
-    // fix browser history/url in bar to revert changes
-    window.history.replaceState({}, null, window.location.origin);
+function cryptoWallet(url, anchorID, fixScroll) {
+    linker.openURL(url, anchorID, fixScroll);
+    if (fixScroll) {
+      // fix the auto scroll to the top when cryptocurrency scheme doesn't have handler
+      window.location.replace(`#${anchorID}`);
+      // fix browser history/url in bar to revert changes
+      window.history.replaceState({}, null, window.location.origin);
+    }
 }
