@@ -4,7 +4,7 @@
 # title: This will be displayed as the website's name in your browser tab.
 title: Andrew Larson
 # description: This will be meta HTML tag content. This can be ignored.
-description: Oh, hey look! A website with my name on it. :P
+description: Welcome to my home page, which at this time serves as a history into my current progress towards a career in software development.
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
 baseurl: ""
