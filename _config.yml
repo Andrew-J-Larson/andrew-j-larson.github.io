@@ -50,8 +50,8 @@ kofi_username:
 patreon_username: 
 paypal_username: AndrewJ18Larson
 coinbase_commerce_url: https://commerce.coinbase.com/checkout/acbae935-8b85-4070-959d-bbc7c8878eca
-bitcoin_wallet_address: PLACEHOLDER
-ethereum_wallet_address: PLACEHOLDER
+bitcoin_wallet_address: 
+ethereum_wallet_address: 
 solana_wallet_address: 
 dogecoin_wallet_address: 
 litecoin_wallet_address: 
